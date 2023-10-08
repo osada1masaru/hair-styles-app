@@ -1,0 +1,39 @@
+<%= form_with model: @style, class: "Form StylesForm" do |f| %>
+  <div class="StylesForm_input-group">
+    <%= f.label :name, "スタイル名", class: "form-label StylesForm_label StylesForm_label-required" %>
+
+    <div class="StylesForm_input">
+      <%= f.text_field :name, class: "form-control", placeholder: "スタイル名を入力" %>
+    </div>
+  </div>
+
+  <div class="StylesForm_input-group">
+    <%= f.label :category, "スタイルカテゴリー", class: "form-label StylesForm_label" %>
+
+    <div class="StylesForm_input">
+      <%= f.text_field :category, class: "form-control", placeholder: "カテゴリー名を入力" %>
+    </div>
+  </div>
+
+  <div class="StylesForm_input-group">
+    <%= f.label :content, "スタイルの特徴", class: "form-label StylesForm_label" %>
+
+    <div class="StylesForm_input">
+      <%= f.text_field :content, class: "form-control", placeholder: "スタイルの特徴を入力" %>
+    </div>
+  </div>
+
+  <div class="StylesForm_input-group FileUploadArea">
+    <%= f.label :image, "スタイル画像", class: "StylesForm_label" %>
+
+    <div class="StylesForm_input FileUploadArea_input-group">
+      <%= f.label :image, "スタイル画像", class: "FileUploadArea_label" do %>
+        <span>画像アップロード</span>
+        <%= f.file_field :image %>
+      <% end %>
+    </div>
+  </div>
+  <%= f.submit "保存", class: 'btn StylesForm_button StylesForm_button-submit' %>
+<% end %>
+
+<%= link_to "キャンセル", :back, class: 'btn StylesForm_button StylesForm_button-cancel' %>
