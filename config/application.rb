@@ -11,12 +11,13 @@ module HairStylsApp
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
-    # Configuration for the application, engines, and railties goes here.
-    #
-    # These settings can be overridden in specific environments using the files
-    # in config/environments, which are processed later.
-    #
-    # config.time_zone = "Central Time (US & Canada)"
-    # config.eager_load_paths << Rails.root.join("extras")
+    config.i18n.default_locale = :ja
+    config.time_zone = 'Asia/Tokyo'
+
+    # form_withのデフォルトを local: true に設定するため
+    config.action_view.form_with_generates_remote_forms = false
+
+    # field_with_errorsのタグを読み込まないようにするため
+    config.action_view.field_error_proc = Proc.new { |html_tag, instance| html_tag }
   end
 end

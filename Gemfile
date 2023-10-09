@@ -62,6 +62,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rubocop', require: false
 gem 'rubocop-airbnb', require: false
 
-gem 'bootstrap', '~> 4.3.1'
+gem 'uglifier'
+gem 'bootstrap', '~> 4.5.3'
 gem 'jquery-rails'
 gem 'now-ui-kit-rails', '~> 0.0.5'

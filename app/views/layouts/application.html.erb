@@ -8,8 +8,9 @@
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../assets/css/now-ui-kit.css?v=1.2.0" rel="stylesheet" />
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
