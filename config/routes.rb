@@ -1,17 +1,22 @@
 Rails.application.routes.draw do
-  resources :styles
-  get 'home/index'
+  root to: 'home#index'
 
-  get 'styles/index'
+  resources :keep, only: [:index, :create, :edit, :update, :destroy] do
+    collection do
+      post :confirm
+    end
+  end
 
-  root to: "home#index"
+  resources :styles do
+    get :own, on: :collection
+  end
 
-  devise_scope :user do
-    get '/users/sign_up' => 'devise/registrations#new'
-    get '/users/sign_out' => 'devise/sessions#destroy'
+  namespace :users do
+    resource :profile, only: [:show, :edit, :update], controller: 'profile'
+    resource :account, only: :show, controller: 'account'
   end
 
   devise_for :users, controllers: {
-    registration: 'users/registration'
+    registrations: 'users/registrations'
   }
 end

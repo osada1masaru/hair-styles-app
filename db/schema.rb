@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_10_08_090913) do
+ActiveRecord::Schema.define(version: 2023_10_10_012738) do
+
+  create_table "styles", force: :cascade do |t|
+    t.string "name"
+    t.text "menu"
+    t.text "detail"
+    t.text "deta"
+    t.string "image"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
 # Could not dump table "users" because of following StandardError
 #   Unknown type 'stirng' for column 'name'
