@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var path = require('path');
-var sass = require('gulp-sass');
+// var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var open = require('gulp-open');
@@ -9,9 +9,11 @@ var Paths = {
   HERE: './',
   DIST: 'dist/',
   CSS: './assets/css/',
-  SCSS_TOOLKIT_SOURCES: './assets/scss/now-ui-kit.scss',
+  SCSS_TOOLKIT_SOURCES: 'assets/scss/now-ui-kit.scss',
   SCSS: './assets/scss/**/**'
 };
+
+const sass = require('gulp-sass')(require('sass'));
 
 gulp.task('compile-scss', function() {
   return gulp.src(Paths.SCSS_TOOLKIT_SOURCES)
