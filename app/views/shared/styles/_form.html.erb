@@ -8,18 +8,26 @@
   </div>
 
   <div class="StylesForm_input-group">
-    <%= f.label :category, "スタイルカテゴリー", class: "form-label StylesForm_label" %>
+    <%= f.label :menu, "メニュー", class: "form-label StylesForm_label" %>
 
     <div class="StylesForm_input">
-      <%= f.text_field :category, class: "form-control", placeholder: "カテゴリー名を入力" %>
+      <%= f.text_field :menu, class: "form-control", placeholder: "メニュー名を入力" %>
     </div>
   </div>
 
   <div class="StylesForm_input-group">
-    <%= f.label :content, "スタイルの特徴", class: "form-label StylesForm_label" %>
+    <%= f.label :detail, "スタイルの特徴", class: "form-label StylesForm_label" %>
 
     <div class="StylesForm_input">
-      <%= f.text_field :content, class: "form-control", placeholder: "スタイルの特徴を入力" %>
+      <%= f.text_field :detail, class: "form-control", placeholder: "スタイルの特徴" %>
+    </div>
+  </div>
+
+  <div class="StylesForm_input-group">
+    <%= f.label :deta, "スタイルデータ", class: "form-label StylesForm_label" %>
+
+    <div class="StylesForm_input">
+      <%= f.text_field :deta, class: "form-control", placeholder: "スタイルデータを入力" %>
     </div>
   </div>
 
