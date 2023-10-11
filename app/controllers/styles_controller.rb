@@ -18,10 +18,10 @@ class StylesController < ApplicationController
   end
 
   def create
-    @style = current_user.styles.build(style_params)
+    @styles = current_user.styles.build(style_params)
 
-    if @style.save
-      redirect_to @style, notice: "スタイルが登録されました"
+    if @styles.save
+      redirect_to @styles, notice: "スタイルが登録されました"
     else
       flash.now[:alert] = "スタイルの登録に失敗しました"
       render :new
@@ -29,7 +29,7 @@ class StylesController < ApplicationController
   end
 
   def destroy
-    if @style.destroy
+    if @styles.destroy
       flash[:notice] = "スタイルが削除されました"
     else
       flash[:alert] = "スタイルの削除に失敗しました"

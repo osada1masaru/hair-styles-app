@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: 'home#index'
+  get 'styles/index'
 
   resources :keep, only: [:index, :create, :edit, :update, :destroy] do
     collection do
