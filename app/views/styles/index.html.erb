@@ -1,0 +1,31 @@
+<div class="container RoomsContainer">
+  <ul class="StyleList">
+    <% @styles.each do |style| %>
+      <li class="Style">
+        <%= image_tag style_image(style), alt: "部屋画像", class: "Style__image" %>
+
+        <div class="StyleBodyWrapper">
+          <p class="Style__name">
+            <%= style.name %>
+          </p>
+
+          <p class="style__menu">
+            <%= style.menu %>
+          </p>
+
+          <p class="style__detail">
+            <%= style.detail %>
+          </p>
+
+          <div class="styleFooter">
+            <p class="style__price">
+              ¥<%= style.deta %>~
+            </p>
+
+            <%= link_to "詳細はこちら", style_url(style), class: "style__link" %>
+          </div>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>

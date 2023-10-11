@@ -26,6 +26,8 @@ Rails.application.configure do
 
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
+  config.assets.js_compressor = :uglifier
+
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
@@ -61,6 +63,9 @@ Rails.application.configure do
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "HairStylsApp_production"
+
+  # 本番環境ではhost名を指定
+  # config.action_mailer.default_url_options = { host: 'xxxx.com' }
 
   config.action_mailer.perform_caching = false
 

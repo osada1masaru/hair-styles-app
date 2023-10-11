@@ -1,0 +1,31 @@
+<section class="container UserSection">
+  <h2>設定</h2>
+
+  <div class="UserContainer">
+    <div class="AccountInformation">
+      <div class="AccountInformation__header">
+        <h3>アカウント</h3>
+
+        <%= link_to edit_user_registration_path, class: "AccountInformation__link" do %>
+          編集
+        <% end %>
+      </div>
+
+      <div class="AccountInformation__input-group">
+        <%= label_tag :email, "メールアドレス", class: "AccountInformation__label" %>
+
+        <p class="AccountInformation__value">
+          <%= current_user.email %>
+        </p>
+      </div>
+
+      <div class="AccountInformation__input-group">
+        <%= label_tag :password, "パスワード", class: "AccountInformation__label" %>
+
+        <p class="AccountInformation__value">
+          *********
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
